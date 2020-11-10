@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-@media (max-width: 600px) {
-    h1 {
-        color: #0bd;
-    }
-}
-
 /* 共通部分 -----------------*/
 html {
     font-size: 100%;
@@ -241,6 +235,9 @@ aside p {
 
 /* モバイル版 ----------*/
 @media (max-width: 600px) {
+    h1 {
+        color: #0bd;
+    }
     .page-title{
         font-size: 2.5rem;
     }
