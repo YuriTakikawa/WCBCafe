@@ -82,7 +82,7 @@ img {
     font-size: 1.375rem;
     background: #0bd;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 5px; 
     padding: 18px 32px;
 }
 
@@ -91,29 +91,26 @@ img {
 }
 
 /* 大きな背景画像 */
-.big-bg {
+.home__big-bg {
+    background-image: url(/Users/yuri/Desktop/WBCCafe/images/main-bg.jpg);
+    min-height: 100vh;
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
 }
 
-#home {
-    background-image: url(/Users/yuri/Desktop/WBCCafe/images/main-bg.jpg);
-    min-height: 100vh;
-}
-
-#home .page-title {
+.home .page-title {
     text-transform: none;
 }
 
 /* NEWS -----------------------*/
-#news {
+.news__big-bg {
     background-image: url(/Users/yuri/Desktop/WBCCafe/images/news-bg.jpg);
     height: 270px;
     margin-bottom: 40px;
 }
 
-#news .page-title {
+.news__big-bg .page-title {
     text-align: center;
 }
 
@@ -232,104 +229,8 @@ aside p {
     order: 1;
 }
 
-
-/* モバイル版 ----------*/
-@media (max-width: 600px) {
-    h1 {
-        color: #0bd;
-    }
-    .page-title{
-        font-size: 2.5rem;
-    }
-    /* HEADER */
-    .main-nav{
-        font-size: 1rem;
-        margin-top: 10px;
-    }
-    .main-nav li {
-        margin: 0 20px;
-    }
-    /* HOME */
-    .home-content {
-        margin-top: 20%;
-    }
-    .page-header {
-        flex-direction: column;
-        align-items: center;
-    }
-    .news-contents {
-        flex-direction: column;
-    }
-    article,aside {
-        width: 100%;
-    }
-    #news .page-title {
-        margin-top: 30px;
-    }
-    aside {
-        margin-top: 60px;
-    }
-    .post-info {
-        margin-bottom: 30px;
-    }
-    .post-date {
-        width: 70px;
-        height: 70px;
-        font-size: 1rem;
-    }
-    .post-date span {
-        font-size: 0.875rem;
-        padding-top: 2px;
-    }
-    .post-title {
-        font-size: 1.375rem;
-    }
-    .post-cat{
-        font-size: 0.875rem;
-        margin-top: 10px;
-    }
-    .post-title,.post-cat {
-        margin-left: 80px;
-    }
-    /* MENU */
-    .menu-content {
-        margin-top: 20%;
-    }
-    .big-box {
-        grid-column: auto;
-        grid-row: auto;
-    }
-    .big-box img {
-        height: 100%;
-    }
-    /* contact */
-    #contact .page-title{
-        margin-top: 40px;
-    }
-    /* form */
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        max-width: 100%;
-    }
-    /* 店舗情報・地図 / SNS */
-    #location .wrapper,
-    #sns .wrapper {
-        flex-direction: column;
-    }
-    .location-info,
-    .location-map,
-    .sns-box {
-        width: 600px;
-    }
-    .sns-box {
-        margin-bottom: 30px;
-    }
-}
-
 /* MENU -----------------------*/
-
-#menu {
+.menu__big-bg {
     background-image: url(/Users/yuri/Desktop/WBCCafe/images/menu-bg.jpg);
     min-height: 100vh;
 }
@@ -351,7 +252,7 @@ aside p {
 .grid {
     display: grid;
     gap: 26px;
-    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
     margin-top: 6%;
     margin-bottom: 50px;
 }
@@ -368,7 +269,7 @@ aside p {
 }
 
 /* contact -----------------------------*/
-#contact {
+.contact__big-bg {
     background-image: url(/Users/yuri/Desktop/WBCCafe/images/contact-bg.jpg);
     min-height: 100vh;
 }
@@ -454,4 +355,97 @@ iframe {
 
 .sns-box {
     width: 30%;
+}
+
+/* モバイル版 ----------*/
+@media (max-width: 600px) {
+    h1 {
+        color: #0bd;
+    }
+    .page-title{
+        font-size: 2.5rem;
+    }
+    /* HEADER */
+    .main-nav{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .main-nav li {
+        margin: 0 20px;
+    }
+    /* HOME */
+    .home-content {
+        margin-top: 20%;
+    }
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .news-contents {
+        flex-direction: column;
+    }
+    article,aside {
+        width: 100%;
+    }
+    #news .page-title {
+        margin-top: 30px;
+    }
+    aside {
+        margin-top: 60px;
+    }
+    .post-info {
+        margin-bottom: 30px;
+    }
+    .post-date {
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+    }
+    .post-date span {
+        font-size: 0.875rem;
+        padding-top: 2px;
+    }
+    .post-title {
+        font-size: 1.375rem;
+    }
+    .post-cat{
+        font-size: 0.875rem;
+        margin-top: 10px;
+    }
+    .post-title,.post-cat {
+        margin-left: 80px;
+    }
+    /* MENU */
+    .menu-content {
+        margin-top: 20%;
+    }
+    .big-box  {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .big-box img {
+        height: 100%;
+    }
+    /* contact */
+    #contact .page-title{
+        margin-top: 40px;
+    }
+    /* form */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        max-width: 100%;
+    }
+    /* 店舗情報・地図 / SNS */
+    #location .wrapper,
+    #sns .wrapper {
+        flex-direction: column;
+
+    }
+    .location-info, .location-map, .sns-box {
+        width: 100%;
+    }
+    .sns-box {
+        margin-bottom: 30px;
+    }
 }
